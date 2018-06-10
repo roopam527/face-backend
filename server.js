@@ -37,8 +37,8 @@ app.post("/imageUrl",(req,res) => {image.handleApiCall(req,res,db)})
 
 app.get("/profile/:id",(req,res) => profile.handleApiCall(req,res))
 
-app.listen(8000,() =>{
-    console.log("App is running at port 8000");
+app.listen(process.env.PORT || 3000,() =>{
+    console.log(`App is running at port ${process.env.PORT}`);
 })
 
 /**
